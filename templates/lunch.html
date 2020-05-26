@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<div class="row">
+    <div class="col s12">
+        <h1 class="center-align">Recipes for Lunch</h1>
+    </div>
+</div>
+
  <ul class="collapsible" data-collapsible="accordion">
     {% for recipe in recipes %}
     {% if recipe.meal_type == 'Lunch' %}    
@@ -9,12 +15,12 @@
                 <div class="col s3">
                     <i class="material-icons">expand_more</i>    
                 </div>
-                <div class="col s9">
+                <div class="col s9, flow-text">
                     <strong>{{recipe.recipe_name}}</strong>
                 </div>
             </div>
             <div class="collapsible-body">
-                <ul>
+                <ul class="flow-text">
                     <li>
                         {{recipe.ingredients}}
                     </li>
@@ -22,7 +28,9 @@
                         {{recipe.required_tools}}
                     </li>
                     <li>
-                        {{recipe.preparation_steps}}
+                        <p>
+                            {{recipe.preparation_steps}}
+                        </p>
                     </li>    
                 </ul>
             </div>       
