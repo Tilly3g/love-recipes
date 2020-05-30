@@ -59,6 +59,21 @@ def get_desserts():
     return render_template("desserts.html", recipes=all_recipes, meals=all_meals)
 
 
+#File paths for adding a new recipe
+@app.route('/add_recipe')
+def add_recipe():
+    all_meals = mongo.db.meals.find()
+    all_tools = mongo.db.tools.find()
+    return render_template('addrecipe.html',
+                           meals=all_meals, tools=all_tools)
+
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    recipes = mongo.db.recipes
+    recipes.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipes'))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
