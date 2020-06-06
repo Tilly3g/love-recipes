@@ -16,6 +16,7 @@ mongo = PyMongo(app)
 def home_page():
     return render_template("index.html", recipes=mongo.db.recipes.find())
 
+
 # Page route for recipe search page
 # Currently set as main path for testing
 @app.route('/')
@@ -59,18 +60,37 @@ def get_desserts():
     return render_template("desserts.html", recipes=all_recipes, meals=all_meals)
 
 
-#File paths for adding a new recipe
+# File paths for adding a new recipe
 @app.route('/add_recipe')
 def add_recipe():
-    all_meals = mongo.db.meals.find()
-    all_tools = mongo.db.tools.find()
-    return render_template('addrecipe.html',
-                           meals=all_meals, tools=all_tools)
+    return render_template('addrecipe.html', meals=mongo.db.meals.find())
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipes'))
+
+
+# File paths for editing recipes
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    the_recipe =  mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    all_meals =  mongo.db.meals.find()
+    return render_template('editrecipe.html', recipe=the_recipe,
+                           meals=all_meals)
+
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
+    recipes = mongo.db.recipes
+    recipes.update( {'_id': ObjectId(recipe_id)},
+    {
+        'recipe_name':request.form.get('recipe_name'),
+        'meal_type':request.form.get('meal_type'),
+        'ingredients': request.form.get('ingredients'),
+        'required_tools': request.form.get('required_tools'),
+        'preparation_steps':request.form.get('preparation_steps')
+    })
     return redirect(url_for('get_recipes'))
 
 

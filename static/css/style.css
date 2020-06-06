@@ -1,0 +1,10 @@
+.background {
+    height: 300px;
+    width: 300px;
+    background-color: red;
+}
+
+.add-margin {
+    margin-top: 2rem;
+    text-align: right;
+}
