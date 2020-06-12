@@ -25,6 +25,14 @@ def get_recipes():
     return render_template("recipes.html")
 
 
+@app.route('/search_results')
+def search_results():
+    search = request.form.get('search')
+    result = mongo.db.recipes.find({'recipe_name': request.form.get('search')})
+    # display results
+    return render_template('results.html', result=result)
+
+
 @app.route('/get_breakfast')
 def get_breakfast():
     all_recipes = mongo.db.recipes.find()
@@ -65,6 +73,7 @@ def get_desserts():
 def add_recipe():
     return render_template('addrecipe.html', meals=mongo.db.meals.find())
 
+
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
@@ -91,6 +100,13 @@ def update_recipe(recipe_id):
         'required_tools': request.form.get('required_tools'),
         'preparation_steps':request.form.get('preparation_steps')
     })
+    return redirect(url_for('get_recipes'))
+
+
+# File path for deleting recipes
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
 
 

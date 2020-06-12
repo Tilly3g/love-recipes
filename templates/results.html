@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="divider"></div>
+<div class="section">
+    <ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header">
+                <div class="col s3">
+                    <i class="material-icons">expand_more</i>    
+                </div>
+                <div class="col s9, flow-text">
+                    <strong>{{result.recipe_name}}</strong>
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <ul class="flow-text">
+                    <li>
+                        {{result.ingredients}}
+                    </li>
+                    <li>
+                        {{result.required_tools}}
+                    </li>
+                    <li>
+                        <p>
+                            {{result.preparation_steps}}
+                        </p>
+                    </li>    
+                </ul>
+            </div>       
+        </li>
+    </ul>
+</div>    
+
+{% endblock %}
