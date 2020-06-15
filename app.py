@@ -25,12 +25,11 @@ def get_recipes():
     return render_template("recipes.html")
 
 
-@app.route('/search_results')
+@app.route('/search_results', methods=['POST'])
 def search_results():
-    search = request.form.get('search')
-    result = mongo.db.recipes.find({'recipe_name': request.form.get('search')})
+    result = mongo.db.recipes.find_one({'recipe_name': request.form.get('search')})
     # display results
-    return render_template('results.html', result=result)
+    return render_template('results.html', recipe=result)
 
 
 @app.route('/get_breakfast')
@@ -66,6 +65,13 @@ def get_desserts():
     all_recipes = mongo.db.recipes.find()
     all_meals = mongo.db.meals.find()
     return render_template("desserts.html", recipes=all_recipes, meals=all_meals)
+
+
+# View full recipe
+@app.route('/view_recipe/<recipe_id>')
+def view_recipe(recipe_id):
+    the_recipe =  mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template('recipeView.html', recipe=the_recipe)
 
 
 # File paths for adding a new recipe

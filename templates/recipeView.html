@@ -1,20 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{% if not recipe %}
-
-<div class="row center-align">
-    <div class="col s12">
-        <h2 class="error">No Results Found!</h2>
-    </div>
-    <div class="col s12">
-        <p class="add-recipe-text">Can't find the recipe you're looking for? Why not add your own!</p>
-        <a href="{{url_for('add_recipe')}}" class="btn">Add new recipe</a>
-    </div>
-</div>
-
-{% else %}
-
 <div class="row">
     <div class="col s12">
         <h1 class="center-align">{{recipe.recipe_name}}</h1>
@@ -53,7 +39,5 @@
         <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small">Delete</a>
     </div>
 </div>
-
-{% endif %}
 
 {% endblock %}
