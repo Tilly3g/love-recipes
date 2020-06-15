@@ -11,7 +11,7 @@
 <div class="section">
 <ul class="collapsible" data-collapsible="accordion">
     {% for recipe in recipes %}
-    {% if recipe.meal_type == 'Snacks' %}    
+    {% if recipe.meal_type == 'Snack' %}    
         <li>
             <div class="collapsible-header">
                 <div class="col s3">
@@ -24,16 +24,11 @@
             <div class="collapsible-body">
                 <ul class="flow-text">
                     <li>
-                        {{recipe.ingredients}}
+                        {{recipe.prep_time}}
                     </li>
                     <li>
-                        {{recipe.required_tools}}
-                    </li>
-                    <li>
-                        <p>
-                            {{recipe.preparation_steps}}
-                        </p>
-                    </li>    
+                        {{recipe.description}}
+                    </li>   
                 </ul>
                 <div>
                     <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small">Delete</a>

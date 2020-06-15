@@ -27,7 +27,8 @@ def get_recipes():
 
 @app.route('/search_results', methods=['POST'])
 def search_results():
-    result = mongo.db.recipes.find_one({'recipe_name': request.form.get('search')})
+    search = request.form.get('search')
+    result = mongo.db.recipes.find_one({'recipe_name': {'$regex': '^' + search + '$', '$options': 'i' }})
     # display results
     return render_template('results.html', recipe=result)
 
@@ -100,13 +101,15 @@ def update_recipe(recipe_id):
     recipes = mongo.db.recipes
     recipes.update( {'_id': ObjectId(recipe_id)},
     {
-        'recipe_name':request.form.get('recipe_name'),
-        'meal_type':request.form.get('meal_type'),
+        'recipe_name': request.form.get('recipe_name'),
+        'prep_time': request.form.get('prep_time'),
+        'description': request.form.get('description'),
+        'meal_type': request.form.get('meal_type'),
         'ingredients': request.form.get('ingredients'),
         'required_tools': request.form.get('required_tools'),
-        'preparation_steps':request.form.get('preparation_steps')
+        'preparation_steps': request.form.get('preparation_steps'),
     })
-    return redirect(url_for('get_recipes'))
+    return redirect(url_for('view_recipe', recipe_id=recipe_id))
 
 
 # File path for deleting recipes
