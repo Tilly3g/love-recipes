@@ -11,15 +11,13 @@ mongo = PyMongo(app)
 
 
 # Page route for home page
-
+@app.route('/')
 @app.route('/home_page')
 def home_page():
     return render_template("index.html", recipes=mongo.db.recipes.find())
 
 
 # Page route for recipe search page
-# Currently set as main path for testing
-@app.route('/')
 @app.route('/get_recipes')
 def get_recipes():
     return render_template("recipes.html")
