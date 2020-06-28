@@ -1,10 +1,39 @@
-.background {
-    height: 300px;
-    width: 300px;
-    background-color: red;
+html {
+    background: url("../images/book-page.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.brand-logo {
+    margin-left: 10px;
+}
+
+.title-font {
+    font-family: 'Galada', cursive;
+}
+
+.main-font {
+    font-family: 'Varela Round', sans-serif;
 }
 
 .add-margin {
     margin-top: 2rem;
     text-align: right;
 }
+
+.picture-box {
+    margin-bottom: 10px;
+}
+
+.picture {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 90%;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+

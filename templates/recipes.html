@@ -1,25 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<h1 class="center-align title-font">Recipe Book</h1>
 
 <form action="{{ url_for('search_results') }}" method="POST">
-<div class="row">
+<div class="row main-font">
     <div class="col s1 add-margin">
     <label class="label-icon" for="search"><i class="material-icons">search</i></label>
     </div>
     <div class="input-field col s11">
-        <input id="search" name="search" type="text" placeholder="Search by recipe name" required>
-        <button class="waves-effect waves-light btn btn_small blue" type="submit">Search</button>
+        <div class="col s11 m9"><input id="search" name="search" type="text" placeholder="Search by recipe name" required></div>
+        <div class="col s3"><button class="waves-effect waves-light btn btn_small blue-grey darken-1" type="submit">Search</button></div>
     </div>
 </div>
 </form>
 
-<div class="collection">
-    <a href="{{url_for('get_breakfast')}}" class="collection-item">Breakfast</a>
-    <a href="{{url_for('get_lunch')}}" class="collection-item">Lunch</a>
-    <a href="{{url_for('get_snacks')}}" class="collection-item">Snacks</a>
-    <a href="{{url_for('get_dinner')}}" class="collection-item">Dinner</a>
-    <a href="{{url_for('get_desserts')}}" class="collection-item">Desserts</a>
+<div class="collection main-font flow-text">
+    <a href="{{url_for('get_breakfast')}}" class="collection-item black-text transparent">Breakfast recipes</a>
+    <a href="{{url_for('get_lunch')}}" class="collection-item black-text transparent">Lunch recipes</a>
+    <a href="{{url_for('get_snacks')}}" class="collection-item black-text transparent">Snack recipes</a>
+    <a href="{{url_for('get_dinner')}}" class="collection-item black-text transparent">Dinner recipes</a>
+    <a href="{{url_for('get_desserts')}}" class="collection-item black-text transparent">Desserts recipes</a>
 </div>
 
 {% endblock %}

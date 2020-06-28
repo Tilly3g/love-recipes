@@ -6,42 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<!-- links to stylesheets from materialize and own CSS-->
+<!-- links to stylesheets from Materialize, Google fonts and own CSS-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Galada&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" /> 
-    <!-- <link rel="stylesheet" type="text/css" href="/static/css/style.css"> -->
+    
     <title>Love Recipes</title>
 
 </head>
 <body>
     <header>
     <!-- Nav bar section -->
-        <nav>
-            <div class="nav-wrapper">
-                <a href="{{url_for('home_page')}}" class="brand-logo">Love Recipes</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{url_for('get_recipes')}}">Search Recipes</a></li>
-                    <li><a href="{{url_for('add_recipe')}}">Add own Recipe</a></li>
-                    <li><a href="{{url_for('home_page')}}">Home</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{url_for('get_recipes')}}">Search Recipes</a></li>
-                    <li><a href="{{url_for('add_recipe')}}">Add own Recipe</a></li>
-                    <li><a href="{{url_for('home_page')}}">Home</a></li>
-                    <li>
-                        <form>
-                            <div class="input-field">
-                                <input id="search" type="search" required>
-                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                                <i class="material-icons">close</i>
-                            </div>
-                        </form>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper blue-grey darken-1">
+                    <a href="{{url_for('home_page')}}" class="brand-logo title-font">Love Recipes</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse main-font"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down main-font">
+                        <li><a href="{{url_for('get_recipes')}}">Search Recipes</a></li>
+                        <li><a href="{{url_for('add_recipe')}}">Add own Recipe</a></li>
+                        <li><a href="{{url_for('home_page')}}">Home</a></li>
+                    </ul>
+                    <ul class="side-nav main-font" id="mobile-demo">
+                        <li><a href="{{url_for('get_recipes')}}">Search Recipes</a></li>
+                        <li><a href="{{url_for('add_recipe')}}">Add own Recipe</a></li>
+                        <li><a href="{{url_for('home_page')}}">Home</a></li>
+                        <li>
+                            <form>
+                                <div class="input-field">
+                                    <input id="search" type="search" required>
+                                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                    <i class="material-icons">close</i>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <!-- Area to add different content for each page -->

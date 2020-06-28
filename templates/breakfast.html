@@ -3,15 +3,15 @@
 
 <div class="row">
     <div class="col s12">
-        <h1 class="center-align">Recipes for Breakfast</h1>
+        <h1 class="center-align title-font">Recipes for Breakfast</h1>
     </div>
 </div>
 
 <div class="divider"></div>
-<div class="section">
-<ul class="collapsible" data-collapsible="accordion">
-    {% for recipe in recipes %}
-    {% if recipe.meal_type == 'Breakfast' %}    
+<div class="section main-font">
+    <ul class="collapsible" data-collapsible="accordion">
+        {% for recipe in recipes %}
+        {% if recipe.meal_type == 'Breakfast' %}    
         <li>
             <div class="collapsible-header">
                 <div class="col s3">
@@ -37,9 +37,9 @@
                 </div>
             </div>       
         </li>
-    {% endif %}
-    {% endfor %}
- </ul>
+        {% endif %}
+        {% endfor %}
+    </ul>
 </div>
 
 {% endblock %}

@@ -3,7 +3,7 @@
 
 {% if not recipe %}
 
-<div class="row center-align">
+<div class="row center-align main-font">
     <div class="col s12">
         <h2 class="error">No Results Found!</h2>
     </div>
@@ -17,16 +17,16 @@
 
 <div class="row center-align">
     <div class="col s12">
-        <h1 class="title-text">{{recipe.recipe_name}}</h1>
+        <h1 class="title-text title-font">{{recipe.recipe_name}}</h1>
     </div>
-    <div class="col s12">
+    <div class="col s12 main-font">
         <h4 class="sub-title">{{recipe.meal_type}}</h4>
         <p class="time-text">Average preparation and cooking time: {{recipe.prep_time}}</p>
     </div>
 </div>
 <div class="divider">
 </div>
-<div class="row">
+<div class="row main-font">
     <div class="section">
         <div class="col s12">
             <h5 class="left-align">Ingredients</h5>
