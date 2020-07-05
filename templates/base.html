@@ -18,7 +18,6 @@
 <body>
     <header>
     <!-- Nav bar section -->
-        
             <nav>
                 <div class="nav-wrapper blue-grey darken-1">
                     <a href="{{url_for('home_page')}}" class="brand-logo title-font">Love Recipes</a>
@@ -32,15 +31,6 @@
                         <li><a href="{{url_for('get_recipes')}}">Search Recipes</a></li>
                         <li><a href="{{url_for('add_recipe')}}">Add own Recipe</a></li>
                         <li><a href="{{url_for('home_page')}}">Home</a></li>
-                        <li>
-                            <form>
-                                <div class="input-field">
-                                    <input id="search" type="search" required>
-                                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                                    <i class="material-icons">close</i>
-                                </div>
-                            </form>
-                        </li>
                     </ul>
                 </div>
             </nav>
@@ -52,15 +42,16 @@
             {% block content %} {% endblock %}
         </div>
     </main>
-    <!-- Jquery and Mareialize Necessary links -->
+    <!-- Jquery and Materialize Necessary links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
     </script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('.collapsible').collapsible();
-            $('select').material_select();
+            $(".dropdown-trigger").dropdown();
+            $(".collapsible").collapsible();
+            $("select").material_select();
             $(".button-collapse").sideNav();
         })
     </script>
