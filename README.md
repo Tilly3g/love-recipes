@@ -32,7 +32,7 @@ I created an initial wireframe for the project using [Lucid Chart](https://www.l
 
 ## Existing Features
 
-- NAvigation bar - allows user to easily move between pages of the website depending on what they want to do.
+- Navigation bar - allows user to easily move between pages of the website depending on what they want to do.
 - Search bar - allows user to search by recipe name.
 - Add own Recipe - allows users to input their own recipe and upload it onto the site.
 - Edit button - allows user to make changes to an existing recipe.
@@ -73,9 +73,14 @@ I created an initial wireframe for the project using [Lucid Chart](https://www.l
 
 ## testing
 
-
+1. Navigation Bar: All the buttons on the nav bar are linked to the correct page and they also collapse down when the screen size is made smaller.
+2. Search bar: The search bar functions by finding the recipe in the database that has the same name as the one that is typed in. Capital letters do not effect the search but the name must match. If no results are found then you are taken to a page that lets you know this and has the add recipe function.
+3. Add recipe: All required feilds must be filled in in order to successfully save the new recipe and error messages will pop up for all feilds where they don't explicitly state they are required. Saving the recipe will successfully add it to the database.
+4. Edit recipe: Pressing on this button will take you to a page wherethe original data is filled in, making it easy to ick out what it is you want to edit without having to re-enter the other details. Saving changes will successfully update the entry in the database.
+5. Delete recipe: Pressing this will successfully remove the entire entry from the database.
 
 Screensizes and Devices:
+
 - I tested the website to make sure it functioned correctly and displayed well on every device given using Chrome Developer Tools when viewing the site in a browser and also that it transitioned well when changing the screensize 
 gradually from large to small.
 - I tested the website on a number of browsers including chrome and firefox to make sure it functioned as expected on 
@@ -84,3 +89,24 @@ all of them.
 screen.
 - I tested the website on a number of mobile devices to make sure it displayed correctly and worked as expected. These 
 included a Moto g6 play, Huawei p20, Samsung S7, iPhone 5s and a Samsung S8.
+
+## Deployment
+
+In order to deploy this website using Heroku I navigated to the app within Heroku. I then clicked on settings and scrolled down to domains. The URL is shown here with the link to the publish app showing as https://love-recipes.herokuapp.com/.
+
+
+In order to deploy the website locally you would need to go to the GitHub repository directly. You would then need to click download 
+and copy the link that it gives you. Next go to your terminal, enter the directory you wish to clone it to using the cd 
+command and then type git clone and paste in the link you just copied. You can then enter the website directory again 
+using the cd command and ls will bring up a list of the files. These can then be opened in your choice of editor.
+
+## Credits
+
+### Content
+- The HTML used for the full page background was copied from [CSS-TRICKS, article ‘Perfect Full Page Background Image'](https://css-tricks.com/perfect-full-page-background-image/).
+- The code used for the search function was modified from [MouseVsPython](https://www.blog.pythonlibrary.org/2017/12/13/flask-101-how-to-add-a-search-form/) and [stackoverflow](https://stackoverflow.com/questions/7101703/how-do-i-make-case-insensitive-queries-on-mongodb).
+- The recipes pre-entered on the website were all obtained from [BBC goodfood](https://www.bbcgoodfood.com/).
+
+### Media
+- The background photo for this website was obtained from [pxfuel](https://www.pxfuel.com/en/free-photo-omiog).
+- The photo was obtained from [PxHere](https://pxhere.com/en/photo/1453277).
