@@ -27,6 +27,7 @@
                         <li><a href="{{url_for('add_recipe')}}">Add own Recipe</a></li>
                         <li><a href="{{url_for('home_page')}}">Home</a></li>
                     </ul>
+
                     <ul class="side-nav main-font" id="mobile-demo">
                         <li><a href="{{url_for('get_recipes')}}">Search Recipes</a></li>
                         <li><a href="{{url_for('add_recipe')}}">Add own Recipe</a></li>
@@ -49,7 +50,6 @@
     </script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $(".dropdown-trigger").dropdown();
             $(".collapsible").collapsible();
             $("select").material_select();
             $(".button-collapse").sideNav();

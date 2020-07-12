@@ -82,8 +82,8 @@ def add_recipe():
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
-    recipes.insert_one(request.form.to_dict())
-    return redirect(url_for('get_recipes'))
+    recipe_id = recipes.insert_one(request.form.to_dict()).inserted_id
+    return redirect(url_for('view_recipe', recipe_id=recipe_id))
 
 
 # File paths for editing recipes
@@ -114,7 +114,7 @@ def update_recipe(recipe_id):
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
-    return redirect(url_for('get_recipes'))
+    return render_template('deleted.html')
 
 
 if __name__ == '__main__':

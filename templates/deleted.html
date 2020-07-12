@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row center-align main-font flow-text">
+    <div class="col s12">
+        <h2 class="error">Recipe Successfully Deleted!</h2>
+    </div>
+    <div class="col s12">
+        <p class="add-recipe-text">Go back to the recipe search 
+        <a href="{{url_for('get_recipes')}}" class="blue-grey-text text-darken-2">here.</a></p>
+    </div>
+</div>
+
+{% endblock %}

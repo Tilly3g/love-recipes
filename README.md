@@ -105,6 +105,7 @@ using the cd command and ls will bring up a list of the files. These can then be
 ### Content
 - The HTML used for the full page background was copied from [CSS-TRICKS, article ‘Perfect Full Page Background Image'](https://css-tricks.com/perfect-full-page-background-image/).
 - The code used for the search function was modified from [MouseVsPython](https://www.blog.pythonlibrary.org/2017/12/13/flask-101-how-to-add-a-search-form/) and [stackoverflow](https://stackoverflow.com/questions/7101703/how-do-i-make-case-insensitive-queries-on-mongodb).
+- The code used to find the last inserted id to view the full recipe was modified from [stackoverflow](https://stackoverflow.com/questions/8783753/how-to-get-the-object-id-in-pymongo-after-an-insert)
 - The recipes pre-entered on the website were all obtained from [BBC goodfood](https://www.bbcgoodfood.com/).
 
 ### Media
