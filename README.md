@@ -92,7 +92,7 @@ included a Moto g6 play, Huawei p20, Samsung S7, iPhone 5s and a Samsung S8.
 
 ## Deployment
 
-In order to deploy this website using Heroku I navigated to the app within Heroku. I then clicked on settings and scrolled down to domains. The URL is shown here with the link to the publish app showing as https://love-recipes.herokuapp.com/.
+In order to deploy this website using Heroku I navigated to the app within Heroku. I then clicked on settings and scrolled down to domains. The URL is shown here with the link to the published app showing as https://love-recipes.herokuapp.com/.
 
 
 In order to deploy the website locally you would need to go to the GitHub repository directly. You would then need to click download 
