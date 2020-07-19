@@ -2,8 +2,6 @@
   <img  src="static/images/logo.png" alt="Page logo">
 </p>
 
-<div align="center">![Page Logo](static/images/logo.png?raw=true "Logo")</div>
-
 # Love Recipes
 
 This is a website where a user can go to either find a recipe or add their own recipe to share with other users. It's an online cookbook that users can add to, edit or delete recipes from, making it more versatile and than a physical book.
