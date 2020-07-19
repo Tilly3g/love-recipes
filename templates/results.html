@@ -19,40 +19,43 @@
     <div class="col s12">
         <h1 class="title-text title-font">{{recipe.recipe_name}}</h1>
     </div>
-    <div class="col s12 main-font">
+    <div class="col s12">
         <h4 class="sub-title">{{recipe.meal_type}}</h4>
-        <p class="time-text">Average preparation and cooking time: {{recipe.prep_time}}</p>
+        <p class="time-text">Overall preparation and cooking time: {{recipe.prep_timehrs}}hr {{recipe.prep_timemins}}mins</p>
     </div>
 </div>
 <div class="divider">
 </div>
 <div class="row main-font">
     <div class="section">
-        <div class="col s12">
+       <div class="col s12 m6 push-m6 picture-box center-align">
+            <img src="{{url_for('static', filename='images/meal_prep.jpg')}}" alt="Image of cooking ingredients" class="picture center-align"/>
+        </div>
+        <div class="col s12 m6 pull-m6">
             <h5 class="left-align">Ingredients</h5>
-            <p class="left-align ingredients-list">{{recipe.ingredients}}</p>
+            <pre><p class="left-align ingredients-list">{{recipe.ingredients}}</p></pre>
         </div>
     </div>
     <div class="section">
         <div class="col s12">
             <h5 class="left-align">Tools Required</h5>
-            <p class="left-align tools-text">{{recipe.required_tools}}</p>
-        </div>
-        <div class="col s6 offset-s3 center-align">
-            <p class="center-align">Don't have the tools you need? Check out our partner store for some great products for all your culinary needs. Use the link below for a 10% discount!</p>
-            <button href="#!" target="_blank" class="center-align btn">Shop now!</button>
+            <p class="left-align">{{recipe.required_tools}}</p>
         </div>
     </div>
     <div class="section">
         <div class="col s12">
             <h5 class="left-align">Preparation and Cooking Steps</h5>
-            <p class="left-align tools-text">{{recipe.preparation_steps}}</p>
+            <pre><p class="left-align">{{recipe.preparation_steps}}</p></pre>
         </div>
     </div>
     <div class="col s12 right-align">
         <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small cyan">Edit</a>
         <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small blue-grey darken-1">Delete</a>
     </div>
+</div>
+<div class="col s12 center-align section">
+    <p class="center-align">Don't have the tools you need? Check out our partner store for some great products for all your culinary needs. Use the link below for a 10% discount!</p>
+    <a href="https://www.amazon.co.uk/kitchen-cookware-dining-glassware-cutlery-pans/b?ie=UTF8&node=392546011" target="_blank" class="btn">Shop now!</a>
 </div>
 
 {% endif %}

@@ -14,9 +14,12 @@
 </div>
 <div class="row main-font">
     <div class="section">
-        <div class="col s12">
+        <div class="col s12 m6 push-m6 picture-box center-align">
+            <img src="{{url_for('static', filename='images/meal_prep.jpg')}}" alt="Image of cooking ingredients" class="picture center-align"/>
+        </div>
+        <div class="col s12 m6 pull-m6">
             <h5 class="left-align">Ingredients</h5>
-            <pre><p class="left-align ingredients-list"> {{recipe.ingredients}}</p></pre>
+            <pre><p class="left-align ingredients-list">{{recipe.ingredients}}</p></pre>
         </div>
     </div>
     <div class="section">
@@ -37,8 +40,8 @@
     </div>
 </div>
 <div class="col s12 center-align section">
-            <p class="center-align">Don't have the tools you need? Check out our partner store for some great products for all your culinary needs. Use the link below for a 10% discount!</p>
-            <a href="https://www.amazon.co.uk/kitchen-cookware-dining-glassware-cutlery-pans/b?ie=UTF8&node=392546011" target="_blank" class="btn">Shop now!</a>
+    <p class="center-align">Don't have the tools you need? Check out our partner store for some great products for all your culinary needs. Use the link below for a 10% discount!</p>
+    <a href="https://www.amazon.co.uk/kitchen-cookware-dining-glassware-cutlery-pans/b?ie=UTF8&node=392546011" target="_blank" class="btn">Shop now!</a>
 </div>
 
 

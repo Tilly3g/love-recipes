@@ -112,5 +112,6 @@ using the cd command and ls will bring up a list of the files. These can then be
 
 ### Media
 - The background photo for this website was obtained from [pxfuel](https://www.pxfuel.com/en/free-photo-omiog).
-- The photo was obtained from [PxHere](https://pxhere.com/en/photo/1453277).
+- The photo on the index page was obtained from [PxHere](https://pxhere.com/en/photo/1453277).
 - The 'Shop now!' button currently links to the Amazon site for cookware [here](https://www.amazon.co.uk/kitchen-cookware-dining-glassware-cutlery-pans/b?ie=UTF8&node=392546011)
+- The photo on the recipe view was obtained from [flickr](https://www.flickr.com/photos/30478819@N08/48558169527/)
