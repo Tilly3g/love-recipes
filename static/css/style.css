@@ -37,3 +37,7 @@ html {
     -webkit-transition: all .5s ease-in-out;
 }
 
+pre {
+    white-space: pre-wrap;
+    font-family: 'Varela Round', sans-serif;
+}

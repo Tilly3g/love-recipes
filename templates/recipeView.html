@@ -16,19 +16,19 @@
     <div class="section">
         <div class="col s12">
             <h5 class="left-align">Ingredients</h5>
-            <p class="left-align ingredients-list">{{recipe.ingredients.replace((';'),'\n')}}</p>
+            <pre><p class="left-align ingredients-list"> {{recipe.ingredients}}</p></pre>
         </div>
     </div>
     <div class="section">
         <div class="col s12">
             <h5 class="left-align">Tools Required</h5>
-            <p class="left-align tools-text">{{recipe.required_tools}}</p>
+            <p class="left-align">{{recipe.required_tools}}</p>
         </div>
     </div>
     <div class="section">
         <div class="col s12">
             <h5 class="left-align">Preparation and Cooking Steps</h5>
-            <p class="left-align tools-text">{{recipe.preparation_steps}}</p>
+            <pre><p class="left-align">{{recipe.preparation_steps}}</p></pre>
         </div>
     </div>
     <div class="col s12 right-align">
