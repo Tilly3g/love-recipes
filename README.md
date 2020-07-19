@@ -1,4 +1,4 @@
-![Page Logo](static/images/logo.png?raw=true "Logo")
+<div align="center">![Page Logo](static/images/logo.png?raw=true "Logo")</div>
 
 # Love Recipes
 
