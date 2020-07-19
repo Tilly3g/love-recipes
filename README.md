@@ -28,7 +28,7 @@ User type examples:
 
 - The above user would only need to navigate to the search function on the website, type in their recipe name to bring up the full recip view and click on the 'Edit' button at the bottom of the screen. They can then make any changes they wish to the recipe in order to share the improved version with the world.
 
-I created an initial wireframe for the project using [Lucid Chart](https://www.lucidchart.com/pages/home) which is linked [here](https://app.lucidchart.com/invitations/accept/006a0bf7-ffa7-4c40-af7e-1a1f42039bd5).
+I created an initial wireframe for the project using [Lucid Chart](https://www.lucidchart.com/pages/home) which is linked [here](static/images/online_cookbook.pdf).
 
 ## Existing Features
 
@@ -108,7 +108,8 @@ using the cd command and ls will bring up a list of the files. These can then be
 - The code used to find the last inserted id to view the full recipe was modified from [stackoverflow](https://stackoverflow.com/questions/8783753/how-to-get-the-object-id-in-pymongo-after-an-insert)
 - The recipes pre-entered on the website were all obtained from [BBC goodfood](https://www.bbcgoodfood.com/).
 - The idea to use the 'pre' tag for formatting the recipe view was taken from [stackoverflow](Using new line(\n) in string and rendering the same in HTML).
-- The method of formatting the 'pre' tag so the text wasn't all on a single line and fit the window size was taken from [stackoverflow](https://stackoverflow.com/questions/7132371/can-i-adjust-the-width-of-a-pre-area-to-fit-the-text)
+- The method of formatting the 'pre' tag so the text wasn't all on a single line and fit the window size was taken from [stackoverflow](https://stackoverflow.com/questions/7132371/can-i-adjust-the-width-of-a-pre-area-to-fit-the-text).
+- The code used to add the error 404 page was found at [Code Maven](https://code-maven.com/flask-return-404).
 
 ### Media
 - The background photo for this website was obtained from [pxfuel](https://www.pxfuel.com/en/free-photo-omiog).

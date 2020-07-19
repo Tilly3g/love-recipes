@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row center-align main-font flow-text">
+    <div class="col s12">
+        <h2 class="error">Page not found!</h2>
+    </div>
+    <div class="col s12">
+        <p class="add-recipe-text">The page you're looking for doesn't exist or has been removed!</p>
+        <p>Click <a class="blue-grey-text text-darken-2" href="{{url_for('home_page')}}">here</a> to go back to the homepage.</p>   
+        <p>Or got to the recipe search <a class="blue-grey-text text-darken-2" href="{{url_for('get_recipes')}}">here</a>!</p>
+    </div>
+</div>
+
+{% endblock %}

@@ -9,6 +9,9 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 mongo = PyMongo(app)
 
+@app.errorhandler(404)
+def page_not_found(error):
+   return render_template('404.html', title = '404'), 404
 
 # Page route for home page
 @app.route('/')
