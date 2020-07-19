@@ -1,3 +1,7 @@
+<p align="center">
+  <img  src="static/images/logo.png" alt="Page logo">
+</p>
+
 <div align="center">![Page Logo](static/images/logo.png?raw=true "Logo")</div>
 
 # Love Recipes
