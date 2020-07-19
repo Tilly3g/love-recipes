@@ -30,7 +30,7 @@
                 <select id="recipe.prep_timemins" name="prep_timemins" required>
                     <option value="" disabled selected>Select Minutes</option>
                         <option value="{{recipe.prep_timemins}}" selected>{{recipe.prep_timemins}}</option>
-                        {% for i in range(0, 65, 5) %}
+                        {% for i in range(0, 60, 5) %}
                         <option value="{{i}}">{{i}}</option>                   
                         {% endfor %}   
                 </select>
