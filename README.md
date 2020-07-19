@@ -1,3 +1,5 @@
+![Page Logo](static/images/logo.png?raw=true "Logo")
+
 # Love Recipes
 
 This is a website where a user can go to either find a recipe or add their own recipe to share with other users. It's an online cookbook that users can add to, edit or delete recipes from, making it more versatile and than a physical book.
@@ -79,6 +81,11 @@ I created an initial wireframe for the project using [Lucid Chart](https://www.l
 4. Edit recipe: Pressing on this button will take you to a page wherethe original data is filled in, making it easy to ick out what it is you want to edit without having to re-enter the other details. Saving changes will successfully update the entry in the database.
 5. Delete recipe: Pressing this will successfully remove the entire entry from the database.
 
+I tested the speed of my website using the full page test in [Pingdom](https://tools.pingdom.com/) Tools.
+This specific test was done on July 19. The web page took 236 ms to load, used 13 requests, and weighed in at 815.3 KB.
+The Google Page Speed performance grade for this web page is 86/100.
+More information on this test can be found [here](https://tools.pingdom.com/#5cd9d3fdf9800000)
+
 Screensizes and Devices:
 
 - I tested the website to make sure it functioned correctly and displayed well on every device given using Chrome Developer Tools when viewing the site in a browser and also that it transitioned well when changing the screensize 
@@ -107,7 +114,7 @@ using the cd command and ls will bring up a list of the files. These can then be
 - The code used for the search function was modified from [MouseVsPython](https://www.blog.pythonlibrary.org/2017/12/13/flask-101-how-to-add-a-search-form/) and [stackoverflow](https://stackoverflow.com/questions/7101703/how-do-i-make-case-insensitive-queries-on-mongodb).
 - The code used to find the last inserted id to view the full recipe was modified from [stackoverflow](https://stackoverflow.com/questions/8783753/how-to-get-the-object-id-in-pymongo-after-an-insert)
 - The recipes pre-entered on the website were all obtained from [BBC goodfood](https://www.bbcgoodfood.com/).
-- The idea to use the 'pre' tag for formatting the recipe view was taken from [stackoverflow](Using new line(\n) in string and rendering the same in HTML).
+- The idea to use the 'pre' tag for formatting the recipe view was taken from [stackoverflow](https://stackoverflow.com/questions/8573890/using-new-line-n-in-string-and-rendering-the-same-in-html).
 - The method of formatting the 'pre' tag so the text wasn't all on a single line and fit the window size was taken from [stackoverflow](https://stackoverflow.com/questions/7132371/can-i-adjust-the-width-of-a-pre-area-to-fit-the-text).
 - The code used to add the error 404 page was found at [Code Maven](https://code-maven.com/flask-return-404).
 
