@@ -24,10 +24,6 @@
             <h5 class="left-align">Tools Required</h5>
             <p class="left-align tools-text">{{recipe.required_tools}}</p>
         </div>
-        <div class="col s6 offset-s3 center-align">
-            <p class="center-align">Don't have the tools you need? Check out our partner store for some great products for all your culinary needs. Use the link below for a 10% discount!</p>
-            <button href="#!" target="_blank" class="center-align btn">Shop now!</button>
-        </div>
     </div>
     <div class="section">
         <div class="col s12">
@@ -40,5 +36,10 @@
         <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small blue-grey darken-1">Delete</a>
     </div>
 </div>
+<div class="col s12 center-align section">
+            <p class="center-align">Don't have the tools you need? Check out our partner store for some great products for all your culinary needs. Use the link below for a 10% discount!</p>
+            <a href="https://www.amazon.co.uk/kitchen-cookware-dining-glassware-cutlery-pans/b?ie=UTF8&node=392546011" target="_blank" class="btn">Shop now!</a>
+</div>
+
 
 {% endblock %}

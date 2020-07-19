@@ -13,24 +13,26 @@
         </div>
         <div class="row">
             <div class="col s12">
-                <p class="black-text"><i class="material-icons small">query_builder</i> Overall Preparation and Cooking Time - options required to save</p>
+                <p class="black-text"><i class="material-icons small">query_builder</i>&emsp; Overall Preparation and Cooking Time - options required to save</p>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s4 offset-s2">
                 <select id="prep_timehrs" name="prep_timehrs" required>
-                    <option value="{{recipe.prep_timehrs}}" selected>{{recipe.prep_timehrs}}</option>
-                    {% for i in range(11) %}
+                    <option value="" disabled selected>Select Hours</option>
+                        <option value="{{recipe.prep_timehrs}}" selected>{{recipe.prep_timehrs}}</option>
+                        {% for i in range(11) %}
                         <option value="{{i}}">{{i}}</option>
-                    {% endfor %}
+                        {% endfor %}
                 </select>
             </div>
             <div class="input-field col s4">
-                <select id="prep_timemins" name="prep_timemins" required>
-                    <option value="{{recipe.prep_timemins}}" selected>{{recipe.prep_timemins}}</option>
-                    {% for i in range(0, 70, 10) %}
-                        <option value="{{i}}">{{i}}</option>
-                    {% endfor %}
+                <select id="recipe.prep_timemins" name="prep_timemins" required>
+                    <option value="" disabled selected>Select Minutes</option>
+                        <option value="{{recipe.prep_timemins}}" selected>{{recipe.prep_timemins}}</option>
+                        {% for i in range(0, 65, 5) %}
+                        <option value="{{i}}">{{i}}</option>                   
+                        {% endfor %}   
                 </select>
             </div>
         </div>
@@ -67,13 +69,13 @@
                 <i class="material-icons prefix">local_dining</i>
                 <select id="meals" name="meal_type" required>
                     <option value="" disabled selected>Select Meal Type - option required to save</option>
-                  {% for meal in meals %}
-                      {% if meal.meal_type == recipe.meal_type%}
-                      <option value="{{meal.meal_type}}" selected >{{meal.meal_type}}</option>
-                      {% else %}
-                       <option value="{{meal.meal_type}}">{{meal.meal_type}}</option>
-                    {% endif %}
-                  {% endfor %}
+                    {% for meal in meals %}
+                        {% if meal.meal_type == recipe.meal_type %}
+                        <option value="{{meal.meal_type}}" selected >{{meal.meal_type}}</option>
+                        {% else %}
+                         <option value="{{meal.meal_type}}">{{meal.meal_type}}</option>
+                        {% endif %}
+                    {% endfor %}
                 </select>
             </div>
         </div>

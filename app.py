@@ -76,7 +76,8 @@ def view_recipe(recipe_id):
 # File paths for adding a new recipe
 @app.route('/add_recipe')
 def add_recipe():
-    return render_template('addrecipe.html', meals=mongo.db.meals.find())
+    all_meals=mongo.db.meals.find()
+    return render_template('addrecipe.html', meals=all_meals)
 
 
 @app.route('/insert_recipe', methods=['POST'])
@@ -89,10 +90,11 @@ def insert_recipe():
 # File paths for editing recipes
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
-    the_recipe =  mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    all_meals =  mongo.db.meals.find()
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    all_meals = mongo.db.meals.find()
     return render_template('editrecipe.html', recipe=the_recipe,
                            meals=all_meals)
+
 
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
@@ -100,7 +102,8 @@ def update_recipe(recipe_id):
     recipes.update( {'_id': ObjectId(recipe_id)},
     {
         'recipe_name': request.form.get('recipe_name'),
-        'prep_time': request.form.get('prep_time'),
+        'prep_timehrs': request.form.get('prep_timehrs'),
+        'prep_timemins': request.form.get('prep_timemins'),
         'description': request.form.get('description'),
         'meal_type': request.form.get('meal_type'),
         'ingredients': request.form.get('ingredients'),
