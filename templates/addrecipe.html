@@ -12,10 +12,26 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">query_builder</i>
-                <input id="prep_time" name="prep_time" type="text">
-                <label for="icon_prefix" class="black-text">Average Preparation and Cooking Time</label>
+            <div class="col s12">
+                <p class="black-text"><i class="material-icons small">query_builder</i> Overall Preparation and Cooking Time - options required to save</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s4 offset-s2">
+                <select id="prep_timehrs" name="prep_timehrs" required>
+                    <option value="" disabled selected>Select hours</option>
+                    {% for i in range(11) %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="input-field col s4">
+                <select id="prep_timemins" name="prep_timemins" required>
+                    <option value="" disabled selected>Select Minutes</option>
+                    {% for i in range(0, 70, 10) %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
             </div>
         </div>
         <div class="row">
@@ -28,21 +44,21 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">restaurant</i>
-                <textarea name="required_tools" id="required_tools" class="materialize-textarea"></textarea>
+                <textarea name="required_tools" maxlength="750" id="required_tools" class="materialize-textarea"></textarea>
                 <label for="icon_telephone" class="black-text">Tools needed</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">kitchen</i>
-                <textarea name="ingredients" id="ingredients" class="materialize-textarea" required></textarea>
+                <textarea name="ingredients" maxlength="1000" id="ingredients" class="materialize-textarea" required></textarea>
                 <label for="icon_telephone" class="black-text">Ingredients, please seperate ingredients with ' ; '. Don't foget to include amounts!</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">subject</i>
-                <textarea name="preparation_steps" id="preparation_steps" class="materialize-textarea" required></textarea>
+                <textarea name="preparation_steps" maxlength="10000" id="preparation_steps" class="materialize-textarea" required></textarea>
                 <label for="icon_telephone" class="black-text">Method</label>
             </div>
         </div>

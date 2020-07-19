@@ -7,7 +7,7 @@
     </div>
     <div class="col s12">
         <h4 class="sub-title">{{recipe.meal_type}}</h4>
-        <p class="time-text">Average preparation and cooking time: {{recipe.prep_time}}</p>
+        <p class="time-text">Overall preparation and cooking time: {{recipe.prep_timehrs}}hr {{recipe.prep_timemins}}mins</p>
     </div>
 </div>
 <div class="divider">
@@ -16,7 +16,7 @@
     <div class="section">
         <div class="col s12">
             <h5 class="left-align">Ingredients</h5>
-            <p class="left-align ingredients-list">{{recipe.ingredients}}</p>
+            <p class="left-align ingredients-list">{{recipe.ingredients.replace((';'),'\n')}}</p>
         </div>
     </div>
     <div class="section">

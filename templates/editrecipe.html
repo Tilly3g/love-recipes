@@ -7,15 +7,31 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">favorite</i>
-                <input id="recipe_name" name="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}" required>
+                <input id="recipe_name" maxlength="50" name="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}" required>
                 <label for="icon_prefix" class="black-text">Recipe Name</label>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">query_builder</i>
-                <input id="prep_time" name="prep_time" type="text" class="validate" value="{{recipe.prep_time}}" required>
-                <label for="icon_prefix" class="black-text">Average Preparation and Cooking Time</label>
+            <div class="col s12">
+                <p class="black-text"><i class="material-icons small">query_builder</i> Overall Preparation and Cooking Time - options required to save</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s4 offset-s2">
+                <select id="prep_timehrs" name="prep_timehrs" required>
+                    <option value="{{recipe.prep_timehrs}}" selected>{{recipe.prep_timehrs}}</option>
+                    {% for i in range(11) %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="input-field col s4">
+                <select id="prep_timemins" name="prep_timemins" required>
+                    <option value="{{recipe.prep_timemins}}" selected>{{recipe.prep_timemins}}</option>
+                    {% for i in range(0, 70, 10) %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
             </div>
         </div>
         <div class="row">
@@ -28,21 +44,21 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">restaurant</i>
-                <textarea name="required_tools" id="required_tools" class="materialize-textarea">{{recipe.required_tools}}</textarea>
+                <textarea name="required_tools" maxlength="750" id="required_tools" class="materialize-textarea">{{recipe.required_tools}}</textarea>
                 <label for="icon_telephone" class="black-text">Tools needed</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">kitchen</i>
-                <textarea name="ingredients" id="ingredients" class="materialize-textarea">{{recipe.ingredients}}</textarea>
+                <textarea name="ingredients" maxlength="1000" id="ingredients" class="materialize-textarea">{{recipe.ingredients}}</textarea>
                 <label for="icon_telephone" class="black-text">Ingredients, don't forget to include amounts!</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">subject</i>
-                <textarea name="preparation_steps" id="preparation_steps" class="materialize-textarea" required>{{recipe.preparation_steps}}</textarea>
+                <textarea name="preparation_steps" maxlength="10000" id="preparation_steps" class="materialize-textarea" required>{{recipe.preparation_steps}}</textarea>
                 <label for="icon_telephone" class="black-text">Method</label>
             </div>
         </div>
