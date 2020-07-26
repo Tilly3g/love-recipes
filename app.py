@@ -13,7 +13,7 @@ mongo = PyMongo(app)
 # 404 error page when incorrect URL used
 @app.errorhandler(404)
 def page_not_found(error):
-   return render_template('404.html', title = '404'), 404
+    return render_template('404.html', title='404'), 404
 
 # Page route for home page
 @app.route('/')
@@ -32,7 +32,7 @@ def get_recipes():
 @app.route('/search_results', methods=['POST'])
 def search_results():
     search = request.form.get('search')
-    result = mongo.db.recipes.find_one({'recipe_name': {'$regex': '^' + search + '$', '$options': 'i' }})
+    result = mongo.db.recipes.find_one({'recipe_name': {'$regex': '^' + search + '$', '$options': 'i'}})
     return render_template('results.html', recipe=result)
 
 
@@ -79,14 +79,14 @@ def get_desserts():
 # Page to view each recipe singularly and in full
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
-    the_recipe =  mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template('recipeView.html', recipe=the_recipe)
 
 
 # Page for adding a new recipe
 @app.route('/add_recipe')
 def add_recipe():
-    all_meals=mongo.db.meals.find()
+    all_meals = mongo.db.meals.find()
     return render_template('addrecipe.html', meals=all_meals)
 
 
@@ -111,7 +111,7 @@ def edit_recipe(recipe_id):
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
-    recipes.update( {'_id': ObjectId(recipe_id)},
+    recipes.update({'_id': ObjectId(recipe_id)},
     {
         'recipe_name': request.form.get('recipe_name'),
         'prep_timehrs': request.form.get('prep_timehrs'),
