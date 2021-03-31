@@ -19,7 +19,6 @@ In order to deploy the website locally, click download and copy the link provide
 - The HTML used for the full page background was copied from [CSS-TRICKS, article ‘Perfect Full Page Background Image'](https://css-tricks.com/perfect-full-page-background-image/).
 - The code used for the search function was modified from [MouseVsPython](https://www.blog.pythonlibrary.org/2017/12/13/flask-101-how-to-add-a-search-form/) and [stackoverflow](https://stackoverflow.com/questions/7101703/how-do-i-make-case-insensitive-queries-on-mongodb).
 - The code used to find the last inserted id to view the full recipe was modified from [stackoverflow](https://stackoverflow.com/questions/8783753/how-to-get-the-object-id-in-pymongo-after-an-insert)
-- The recipes pre-entered on the website were all obtained from [BBC goodfood](https://www.bbcgoodfood.com/).
 - The idea to use the 'pre' tag for formatting the recipe view was taken from [stackoverflow](https://stackoverflow.com/questions/8573890/using-new-line-n-in-string-and-rendering-the-same-in-html).
 - The method of formatting the 'pre' tag so the text wasn't all on a single line and fit the window size was taken from [stackoverflow](https://stackoverflow.com/questions/7132371/can-i-adjust-the-width-of-a-pre-area-to-fit-the-text).
 - The code used to add the error 404 page was found at [Code Maven](https://code-maven.com/flask-return-404).
